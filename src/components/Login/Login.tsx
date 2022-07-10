@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import UiContext from "../../context/ui";
 import env from "dotenv";
 import client from "../../client/client";
@@ -21,24 +21,29 @@ const Login = () => {
 
   const loginRequest = async (email: any, password: any, config: any) => {
     try {
-      const res = await client.post("/api/user/validate", {email, password}, config);
+      const res = await client.post(
+        "/api/user/validate",
+        { email, password },
+        config
+      );
 
       if (res.status === 200) {
         console.log("success: ", res);
         setUserValidated(true);
         setError(false);
-      } else {
-        setError(true);
       }
     } catch (error) {
+      setError(true);
       console.log("axios error: ", error);
     }
   };
 
+  useEffect(() => {}, [error]);
+
   return (
     <div className={styles.screen}>
-      {error ? <div>Invalid credentials</div> : null}
       <div className={styles.contentLogin}>
+        {error ? <div className={styles.error}>Invalid credentials</div> : null}
         <div className={styles.imgLogo}></div>
         <div className={styles.formLogin}>
           <div className={styles.field}>

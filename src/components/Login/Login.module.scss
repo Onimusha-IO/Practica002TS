@@ -12,6 +12,19 @@
     width: 303px;
     gap: 30px;
 
+    .error {
+      height: 45px;
+      padding: 10px;
+      display: flex;
+      font-weight: 600;
+      align-items: center;
+      position: relative;
+      border-radius: 5px;
+      box-shadow: 0 0 15px 5px #ccc;
+      background-color: #f7a7a3;
+      border-left: 5px solid #860B02;
+    }
+
     .imgLogo {
       width: 303px;
       height: 43px;
