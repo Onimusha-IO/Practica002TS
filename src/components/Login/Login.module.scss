@@ -22,7 +22,7 @@
       border-radius: 5px;
       box-shadow: 0 0 15px 5px #ccc;
       background-color: #f7a7a3;
-      border-left: 5px solid #860B02;
+      border-left: 5px solid #860b02;
     }
 
     .imgLogo {
@@ -96,6 +96,12 @@
       &:active {
         transform: scale(0.9);
       }
+    }
+
+    .create {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
   }
 }

@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import UiContext from "../../context/ui";
-import env from "dotenv";
+
 import client from "../../client/client";
 
 import styles from "./Login.module.scss";
@@ -80,6 +80,10 @@ const Login = () => {
           Ingresar
         </button>
         <a href="#">Olvidé mi contraseña</a>
+        <div className={styles.create}>
+          <label>Sin Usuario?</label>
+          <a href="/CreateUser">Crear Cuenta</a>
+        </div>
       </div>
     </div>
   );

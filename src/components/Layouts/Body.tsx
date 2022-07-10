@@ -14,8 +14,8 @@ const Body = () => {
       <Menu />
       <Content>
         <Routes>
-          <Route path="/homePage" element={<HomePage />}></Route>
-          <Route path="*" element={<Navigate to="/homePage" />}></Route>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="*" element={<HomePage />}></Route>
           <Route path="/mastersPage" element={<MastersPage />}></Route>
           <Route path="/processesPage" element={<ProcessesPage />}></Route>
           <Route path="/reportsPage" element={<ReportsPage />}></Route>

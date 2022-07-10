@@ -4,7 +4,7 @@ import UiContext from "../../context/ui";
 import styles from "./User.module.scss";
 
 const User = () => {
-  const { showMenu, setShowMenu, setUserValidated } = useContext(UiContext);
+  const { setShowMenu, setUserValidated } = useContext(UiContext);
 
   useEffect(() => {
     setShowMenu(false);
